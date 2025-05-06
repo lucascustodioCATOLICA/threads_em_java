@@ -6,3 +6,4 @@
 1. Modifique a linha 91 do arquivo CPFProcessor.java
 2. javac .\CPFProcessor.java .\CPFValidator.java
 3. java CPFProcessor
+4. Os ultimos valores printados no terminal, sao os valores de CPFs invalidos e validos corretos.

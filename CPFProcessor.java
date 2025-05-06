@@ -28,7 +28,6 @@ public class CPFProcessor {
         executor.shutdown();
 
         long duration = endTime - startTime;
-        System.out.println("Tempo total de execução: " + duration + "ms");
 
         // Salvar tempo de execução
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("output/versao_" + numThreads + "_threads.txt"))) {
@@ -38,6 +37,7 @@ public class CPFProcessor {
         }
 
         // Exibir a soma total dos CPFs válidos e inválidos
+        System.out.println("--- --- --- --- --- ");
         System.out.println("Total de CPFs válidos: " + totalValidos.get());
         System.out.println("Total de CPFs inválidos: " + totalInvalidos.get());
     }
@@ -86,7 +86,7 @@ public class CPFProcessor {
         if (listOfFiles != null) {
             List<File> files = Arrays.asList(listOfFiles);
 
-            int numThreads = 1; // Modificar para 2, 3, etc.
+            int numThreads = 30; // Modificar para 2, 3, etc.
 
             List<List<File>> dividedFiles = divideFiles(files, numThreads);
 
